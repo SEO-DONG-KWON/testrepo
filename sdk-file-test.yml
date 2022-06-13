@@ -1,0 +1,13 @@
+- name: sdk test
+  hosts: all
+  gather_facts: false
+  tasks:
+  - name: create directory
+    file:
+      path: /home/ansible/sdktest
+      state: directory
+ 
+  - name: touch file
+    file:
+      path: /home/ansible/sdktest/sdktest0613.txt
+      state: touch
